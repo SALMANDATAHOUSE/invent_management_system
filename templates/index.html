@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome To Smart Inventory</title>
+  <style>
+    /* CSS Styles */
+    body {
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
+      margin: 40px auto;
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .options {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .options li {
+      margin-bottom: 20px;
+      animation: highlightGreen 0.5s infinite alternate;
+    }
+
+    .options a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: #61b15a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      width: 200px;
+      height: 200px;
+      font-size: 20px;
+    }
+
+    .options a:hover {
+      background-color: #499345;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes highlightGreen {
+      from {
+        background-color: #61b15a;
+      }
+      to {
+        background-color: #b1d6a2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h1>Welcome to Smart Inventory</h1>
+    <h2>Customers</h2>
+    <ul class="options">
+      <li>
+        <a href="/customer/add">
+          Add Customer
+        </a>
+      </li>
+      <li>
+        <a href="/customer/update">
+          Update Customer
+        </a>
+      </li>
+      <li>
+        <a href="/customer/delete">
+          Delete Customer
+        </a>
+      </li>
+      <li>
+        <a href="/customer/show">
+          Show Customers
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Products</h2>
+    <ul class="options">
+      <li>
+        <a href="/product/add">
+          Add Product
+        </a>
+      </li>
+      <li>
+        <a href="/product/update">
+          Update Product
+        </a>
+      </li>
+      <li>
+        <a href="/product/delete">
+          Delete Product
+        </a>
+      </li>
+      <li>
+        <a href="/product/show">
+          Show Products
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Orders</h2>
+    <ul class="options">
+      <li>
+        <a href="/orders/add">
+          Add Order
+        </a>
+      </li>
+      <li>
+        <a href="/orders/update">
+          Update Order
+        </a>
+      </li>
+      <li>
+        <a href="/orders/delete">
+          Delete Order
+        </a>
+      </li>
+      <li>
+        <a href="/orders/show">
+          Show Orders
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Suppliers</h2>
+    <ul class="options">
+      <li>
+        <a href="/supplier/add">
+          Add Supplier
+        </a>
+      </li>
+      <li>
+        <a href="/supplier/update">
+          Update Supplier
+        </a>
+      </li>
+      <li>
+        <a href="/supplier/delete">
+          Delete Supplier
+        </a>
+      </li>
+      <li>
+        <a href="/supplier/show">
+          Show Suppliers
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

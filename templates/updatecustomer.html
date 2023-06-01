@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Customer</title>
+  <style>
+    /* CSS Styles */
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .form-container input[type="text"],
+    .form-container select,
+    .form-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #d8d8d8;
+    }
+
+    .form-container input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .form-container input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Update Customer</h1>
+  <div class="form-container">
+    <form action="/customer/update" method="POST">
+      <input type="text" name="customer_id" placeholder="Customer ID" required>
+      <select name="change" required>
+        <option value="">Select Attribute to Change</option>
+        <option value="customer_name">Customer Name</option>
+        <option value="customer_addr">Customer Address</option>
+        <option value="customer_email">Customer Email</option>
+      </select>
+      <input type="text" name="newvalue" placeholder="New Value" required>
+      <input type="submit" value="Update Customer">
+    </form>
+  </div>
+</body>
+</html>

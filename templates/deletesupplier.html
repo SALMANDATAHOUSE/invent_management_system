@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Supplier</title>
+  <style>
+    /* CSS Styles */
+    body {
+      background-color: #b3e6ff;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .form-container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff2cc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .form-container input[type="text"],
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffe0b3;
+      color: #333;
+    }
+
+    .form-container button {
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #ffcc80;
+    }
+  </style>
+</head>
+<body>
+  <h1>Delete Supplier</h1>
+  <div class="form-container">
+    <form action="/supplier/delete" method="POST">
+      <input type="text" name="supplier_id" placeholder="Supplier ID" required>
+      <button type="submit">Delete Supplier</button>
+    </form>
+  </div>
+</body>
+</html>

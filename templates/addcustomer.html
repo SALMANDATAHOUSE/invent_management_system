@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Customer</title>
+  <style>
+    /* CSS Styles */
+    body {
+      background-color: yellow;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: yellow;
+    }
+
+    .form-container button {
+      background-color: yellow;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #ffffcc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add Customer</h1>
+  <div class="form-container">
+    <form action="/customer/add" method="POST">
+      <input type="text" name="customer_name" placeholder="Customer Name" required>
+      <input type="text" name="customer_addr" placeholder="Customer Address" required>
+      <input type="email" name="customer_email" placeholder="Customer Email" required>
+      <button type="submit">Add Customer</button>
+    </form>
+  </div>
+</body>
+</html>

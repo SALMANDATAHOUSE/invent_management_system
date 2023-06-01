@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Customers</title>
+  <style>
+    /* CSS Styles */
+    body {
+      background-color: yellow;
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .animated {
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .highlight {
+      background-color: yellow;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Show Customers</h1>
+  <table>
+    <tr>
+      <th>CUSTOMER ID</th>
+      <th>CUSTOMER NAME</th>
+      <th>CUSTOMER ADDRESS</th>
+      <th>CUSTOMER EMAIL</th>
+    </tr>
+    {% for customer in data %}
+    <tr class="animated">
+      <td>{{ customer['CUSTOMER_ID'] }}</td>
+      <td>{{ customer['CUSTOMER_NAME'] }}</td>
+      <td>{{ customer['CUSTOMER_ADDR'] }}</td>
+      <td>{{ customer['CUSTOMER_EMAIL'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

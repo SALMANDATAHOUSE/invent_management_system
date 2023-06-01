@@ -28,7 +28,7 @@ cn = conn.cursor()
 def home():
     return render_template('index.html')
 
-@app.route('/SHOW - CUSTOMERS')
+@app.route('/customer/show')
 def CUSTOMER_show():
     cn = conn.cursor()
     cn.execute("SELECT * FROM CUSTOMER")
@@ -255,16 +255,23 @@ def updateorders():
 
 
 @app.route('/orders/delete', methods=['GET', 'POST'])
-def deleteorders():
+def delete_orders():
     if request.method == 'POST':
         cn = conn.cursor()
-        ordersid = request.form.get('ORDER_ID')
-        cn.execute(f"DELETE FROM ORDERS WHERE ORDER_ID = '{ordersid}'")
-        conn.commit()
-        print('Data has been deleted')
-        return jsonify({'message': 'successful'})
+        orders_id = request.form.get('ORDER_ID')
+        try:
+            cn.execute(f"DELETE FROM ORDERS WHERE ORDER_ID = '{orders_id}'")
+            conn.commit()
+            print('Data has been deleted')
+            return jsonify({'message': 'successful'})
+        except Exception as e:
+            print('Error occurred:', str(e))
+            return jsonify({'message': 'error'})
+
     else:
-        return render_template('deleteproduct.html')
+        return render_template('deleteorders.html')
+
+
 
 if __name__=='__main__':
     app.run()
